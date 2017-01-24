@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_publications"
+        android:icon="@mipmap/ic_lists"
+        android:title="Gérer mes publications"/>
+    <item android:id="@+id/nav_acount"
+        android:icon="@mipmap/ic_username"
+        android:title="Gérer mon compte"/>
+    <item android:id="@+id/nav_logout"
+        android:icon="@mipmap/ic_logout"
+        android:title="Déconnexion"/>
+
+</menu>
