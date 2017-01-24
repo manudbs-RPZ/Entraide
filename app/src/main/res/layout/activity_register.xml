@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context="vimo.entraide.activity.RegisterActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logoprojetiti"
+            android:background="#22ffffff"
+            android:id="@+id/imageView"
+            android:paddingTop="25dp"
+            android:paddingBottom="15dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:background="#22ffffff"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="SE CONNECTER"
+                android:textSize="12dp"
+                android:textColor="#ededed"
+                android:background="#00ffffff"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/registerBLogin"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="S'INSCRIRE"
+                android:textSize="12dp"
+                android:textColor="#ededed"
+                android:background="#00ffffff"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/nonactive"
+                android:id="@+id/imageView6"
+                android:background="#22ffffff"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/nonactive"
+                android:background="#DD3333"
+                android:id="@+id/imageView5"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@mipmap/username"
+                android:id="@+id/imageView2"
+                android:layout_weight="0.40"
+                android:layout_height="50dp"
+                android:scaleType="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:inputType="textPersonName"
+                android:hint="Nom d'utilisateur"
+                android:textSize="15sp"
+                android:textColorHint="#8E8E93"
+                android:theme="@style/EditTextTheme"
+                android:textColor="#8E8E93"
+                android:ems="10"
+                android:id="@+id/registerEtNom"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@mipmap/email"
+                android:id="@+id/imageView7"
+                android:layout_weight="0.40"
+                android:scaleType="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/registerEtMail"
+                android:theme="@style/EditTextTheme"
+                android:layout_weight="1"
+                android:hint="prenom.nom@hei.yncrea.fr"
+                android:textSize="15sp"
+                android:textColor="#8E8E93"
+                android:textColorHint="#8E8E93"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@mipmap/password"
+                android:id="@+id/imageView8"
+                android:layout_weight="0.40"
+                android:scaleType="center"
+                android:layout_height="50dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/registerEtPwd"
+                android:theme="@style/EditTextTheme"
+                android:layout_weight="1"
+                android:hint="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                android:textSize="15sp"
+                android:textColor="#8E8E93"
+                android:textColorHint="#8E8E93" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <Button
+                android:text="Valider"
+                android:textColor="#ededed"
+                android:textAllCaps="false"
+                android:background="#DD3333"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/registerBRegister" />
+
+            <Button
+                android:text="Conditions d'utilisation"
+                android:layout_width="match_parent"
+                android:background="#00FFFFFF"
+                android:layout_height="50dp"
+                android:textAllCaps="false"
+                android:id="@+id/registerBUtilisation"
+                android:textColor="#8E8E93"
+                android:textSize="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
