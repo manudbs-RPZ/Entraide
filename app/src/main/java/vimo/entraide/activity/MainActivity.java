@@ -9,11 +9,22 @@ import java.util.HashMap;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity{
+
+
+    /*Creation du burger */
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mToggle;
+    /*fin*/
+
 
     private TextView txtName;
     private TextView txtEmail;
@@ -24,8 +35,20 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        /*Creation burger (ico menu)*/
+        mDrawerLayout= (DrawerLayout) findViewById(R.id.drawerLayout);
+        mToggle= new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        /* fin creation burger */
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         txtName = (TextView) findViewById(R.id.name);
         txtEmail = (TextView) findViewById(R.id.email);
@@ -59,6 +82,18 @@ public class MainActivity extends Activity {
                 logoutUser();
             }
         });
+    }
+
+    /* Pour permetre d'ouvrir le menu */
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(mToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     /**
