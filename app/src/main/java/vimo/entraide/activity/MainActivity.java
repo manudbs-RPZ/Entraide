@@ -6,7 +6,6 @@ import vimo.entraide.helper.SessionManager;
 
 import java.util.HashMap;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -36,6 +35,8 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
+
         /*Creation burger (ico menu)*/
         mDrawerLayout= (DrawerLayout) findViewById(R.id.drawerLayout);
         mToggle= new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity{
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         /* fin creation burger */
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
