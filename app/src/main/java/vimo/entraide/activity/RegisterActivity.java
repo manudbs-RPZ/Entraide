@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import vimo.entraide.R;
+import vimo.entraide.app.Utility;
 import vimo.entraide.app.AppConfig;
 import vimo.entraide.app.AppController;
 import vimo.entraide.helper.SQLiteHandler;
@@ -76,7 +77,11 @@ public class RegisterActivity extends Activity {
                 String password = inputPassword.getText().toString().trim();
 
                 if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
-                    registerUser(name, email, password);
+                    if(Utility.validate(email)) {
+                        registerUser(name, email, password);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Veuilez saisir une adresse mail valide", Toast.LENGTH_LONG).show();
+                    }
                 } else {
                     Toast.makeText(getApplicationContext(),
                             "Veuillez ne laisser aucun champ vide !", Toast.LENGTH_LONG)
