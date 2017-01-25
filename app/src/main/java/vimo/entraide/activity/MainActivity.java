@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-
     private TextView txtName;
     private TextView txtEmail;
     private Button btnLogout;
