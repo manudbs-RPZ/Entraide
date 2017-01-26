@@ -10,12 +10,14 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/navigation_menu"
+        android:layout_gravity="start"
         android:layout_weight="1"
         app:headerLayout="@layout/navigation_header">
 
     </android.support.design.widget.NavigationView>
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@mipmap/background">
@@ -30,7 +32,7 @@
             android:layout_marginTop="50dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:orientation="horizontal"

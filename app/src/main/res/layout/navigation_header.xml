@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="100dp"
-    android:background="#ededed">
+    android:layout_width="match_parent" android:layout_height="50dp"
+    android:background="@color/greyBG">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_marginTop="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/nonactive"
+            android:background="#DD3333"
+            android:id="@+id/imageView5"
+            android:layout_marginEnd="28dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </LinearLayout>
 
     <TextView
         android:text="Paramètre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp"
+        android:padding="10dp"
         android:id="@+id/textView"
-        android:background="#ededed"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="@color/textColor"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
