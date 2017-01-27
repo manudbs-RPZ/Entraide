@@ -5,10 +5,6 @@
     android:id="@+id/content_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="vimo.entraide.activity.MainActivity"
     tools:showIn="@layout/app_bar_main">
@@ -16,18 +12,143 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@mipmap/background">
 
-        <TextView
-            android:text="TextView"
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/name" />
+            android:gravity="center">
 
-        <TextView
-            android:text="TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/email" />
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bonjour"
+                    android:textSize="24sp"
+                    android:textColor="#ededed"
+                    android:scrollHorizontally="false"/>
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quelqu'un"
+                    android:textColor="#ededed"
+                    android:textSize="24dp"
+                    android:paddingLeft="6dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp">
+
+                <Button
+                    android:textAllCaps="false"
+                    android:text="Evènements"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="#ededed"
+                    android:background="#22ffffff"
+                    android:layout_width="50dp"
+                    android:id="@+id/button4"
+                    android:layout_weight="1"
+                    android:layout_height="100dp" />
+
+                <Button
+                    android:textAllCaps="false"
+                    android:text="Forum"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#22ffffff"
+                    android:textColor="#ededed"
+                    android:layout_width="50dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/button3"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:textAllCaps="false"
+                    android:textColor="#ededed"
+                    android:text="Appartements"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#22ffffff"
+                    android:layout_width="50dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/button6"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:textAllCaps="false"
+                    android:text="Covoiturages"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#ededed"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#22ffffff"
+                    android:layout_width="50dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/button5"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:textAllCaps="false"
+                    android:text="Ventes d'objets"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="#ededed"
+                    android:background="#22ffffff"
+                    android:layout_width="50dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/button8"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:textAllCaps="false"
+                    android:text="Corrigés"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="#ededed"
+                    android:layout_marginBottom="16dp"
+                    android:background="#22ffffff"
+                    android:layout_width="50dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/button7"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
