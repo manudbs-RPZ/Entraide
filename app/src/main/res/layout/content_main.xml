@@ -63,7 +63,7 @@
                     android:textColor="#fff"
                     android:background="@mipmap/img_event"
                     android:layout_width="50dp"
-                    android:id="@+id/button4"
+                    android:id="@+id/event"
                     android:layout_weight="1"
                     android:layout_height="100dp" />
 
@@ -145,7 +145,7 @@
                     android:background="#22ffffff"
                     android:layout_width="50dp"
                     android:layout_height="100dp"
-                    android:id="@+id/button7"
+                    android:id="@+id/corriges"
                     android:layout_weight="1" />
 
             </LinearLayout>
