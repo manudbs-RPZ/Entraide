@@ -1,8 +1,6 @@
 package vimo.entraide.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -10,7 +8,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import vimo.entraide.R;
@@ -20,12 +17,8 @@ import vimo.entraide.helper.SessionManager;
 import java.util.HashMap;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
-import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -34,6 +27,9 @@ public class MainActivity extends AppCompatActivity
 
     private TextView txtName;
     private Button buttonCorrige;
+    private Button buttonEvent;
+    private Button buttonObjet;
+    private Button buttonForum;
 
     private SQLiteHandler db;
     private SessionManager session;
@@ -55,6 +51,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
 
         txtName = (TextView) findViewById(R.id.name);
 
@@ -76,10 +73,40 @@ public class MainActivity extends AppCompatActivity
         // Displaying the user details on the screen
         txtName.setText(name);
 
+        final Animation animTranslateRight = AnimationUtils.loadAnimation(this,R.anim.anim_translate_rigth);
+        final Animation animTranslateLeft = AnimationUtils.loadAnimation(this,R.anim.anim_translate_left);
+        final Animation animTranslateUp = AnimationUtils.loadAnimation(this,R.anim.anim_translate_up);
+        final Animation animTranslateDown = AnimationUtils.loadAnimation(this,R.anim.anim_translate_down);
+
+        buttonObjet = (Button) findViewById(R.id.mainBObjets);
+        buttonObjet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.startAnimation(animTranslateDown);
+            }
+        });
+
+        buttonForum = (Button) findViewById(R.id.mainBForum);
+        buttonForum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.startAnimation(animTranslateUp);
+            }
+        });
+
+        buttonCorrige = (Button) findViewById(R.id.mainBEvent);
+        buttonCorrige.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.startAnimation(animTranslateLeft);
+            }
+        });
+
         buttonCorrige = (Button) findViewById(R.id.mainBPromo);
         buttonCorrige.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
+                view.startAnimation(animTranslateRight);
                 Intent i = new Intent(getApplicationContext(),
                         PromoActivity.class);
                 startActivity(i);
@@ -87,6 +114,8 @@ public class MainActivity extends AppCompatActivity
             }
 
         });
+
+
     }
 
     /**
