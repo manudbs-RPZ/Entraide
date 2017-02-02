@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="80dp"
-    android:background="#333"
+    android:background="#22ffffff"
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -11,11 +11,9 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:layout_height="56dp"
         android:text="Paramètres"
-        android:textSize="17dp"
-        android:layout_marginBottom="10dp"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
@@ -23,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="5dp"
-        android:background="#ff00"/>
+        android:textSize="1dp"
+        android:background="#dd3333"/>
 
 </LinearLayout>

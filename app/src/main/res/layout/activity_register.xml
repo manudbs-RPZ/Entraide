@@ -53,22 +53,22 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="5dp">
+            android:layout_height="2dp">
 
-            <ImageView
+            <TextView
+                android:text=""
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/nonactive"
-                android:id="@+id/imageView6"
                 android:background="#22ffffff"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
                 android:layout_weight="1" />
 
-            <ImageView
+            <TextView
+                android:text=""
+                android:background="#dd3333"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/nonactive"
-                android:background="#DD3333"
-                android:id="@+id/imageView5"
+                android:id="@+id/textView7"
                 android:layout_weight="1" />
 
         </LinearLayout>
@@ -76,7 +76,8 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -168,7 +169,7 @@
                 android:text="Valider"
                 android:textColor="#ededed"
                 android:textAllCaps="false"
-                android:background="#DD3333"
+                android:background="@drawable/buttonred"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/registerBRegister" />

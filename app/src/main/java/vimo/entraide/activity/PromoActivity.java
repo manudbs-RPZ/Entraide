@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 
 import java.util.HashMap;
 
@@ -20,13 +21,15 @@ import vimo.entraide.R;
 import vimo.entraide.helper.SQLiteHandler;
 import vimo.entraide.helper.SessionManager;
 
-public class PromoActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class PromoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
 
     private SQLiteHandler db;
     private SessionManager session;
+
+    private ImageButton btnMain;
+    private ImageButton btnEntraideMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,28 @@ public class PromoActivity extends AppCompatActivity
         setContentView(R.layout.activity_promo);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        btnEntraideMain = (ImageButton) findViewById(R.id.barBEntraide);
+        btnEntraideMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivity = new Intent(getApplicationContext(),
+                        MainActivity.class);
+                startActivity(mainActivity);
+                finish();
+            }
+        });
+
+        btnMain = (ImageButton) findViewById(R.id.promoBmain);
+        btnMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivity = new Intent(getApplicationContext(),
+                        MainActivity.class);
+                startActivity(mainActivity);
+                finish();
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity
         // Displaying the user details on the screen
         txtName.setText(name);
 
-        buttonCorrige = (Button) findViewById(R.id.corriges);
+        buttonCorrige = (Button) findViewById(R.id.mainBPromo);
         buttonCorrige.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {

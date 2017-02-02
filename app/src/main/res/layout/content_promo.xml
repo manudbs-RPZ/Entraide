@@ -20,20 +20,42 @@ android:background="@mipmap/background">
     android:layout_alignParentTop="true"
     android:layout_alignParentStart="true">
 
-    <TextView
-        android:text="Promotion :"
-        android:textSize="15sp"
-        android:textColor="#ededed"
-        android:gravity="center"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:id="@+id/textView2" />
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/back"
+            android:background="#00ffffff"
+            android:id="@+id/promoBmain"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Promotion :"
+            android:textSize="15sp"
+            android:textColor="#ededed"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:id="@+id/textView2"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5"
+            android:layout_weight="1" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="15dp">
+        android:paddingBottom="16dp">
 
         <TextView
             android:text=""
@@ -48,7 +70,7 @@ android:background="@mipmap/background">
             android:textColor="#ededed"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:background="#22ffffff"
+            android:background="@drawable/buttontored"
             android:id="@+id/button"
             android:layout_weight="1" />
     </LinearLayout>
@@ -57,7 +79,7 @@ android:background="@mipmap/background">
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="15dp">
+        android:paddingBottom="16dp">
 
         <TextView
             android:text=""
@@ -72,7 +94,7 @@ android:background="@mipmap/background">
             android:textColor="#ededed"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:background="#22ffffff"
+            android:background="@drawable/buttontored"
             android:id="@+id/button2"
             android:layout_weight="1" />
     </LinearLayout>
@@ -81,7 +103,7 @@ android:background="@mipmap/background">
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="15dp">
+        android:paddingBottom="16dp">
 
         <TextView
             android:text=""
@@ -96,10 +118,10 @@ android:background="@mipmap/background">
             android:textColor="#ededed"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:background="#22ffffff"
+            android:background="@drawable/buttontored"
             android:id="@+id/button9"
             android:layout_weight="1" />
     </LinearLayout>
-
 </LinearLayout>
+
 </RelativeLayout>

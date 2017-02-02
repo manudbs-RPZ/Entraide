@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Entraide.iml" filepath="$PROJECT_DIR$/Entraide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EntraideGit.iml" filepath="$PROJECT_DIR$/EntraideGit.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

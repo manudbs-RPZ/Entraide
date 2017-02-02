@@ -4,15 +4,15 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@mipmap/home"
-            android:title="Acceuil" />
+            android:title="Accueil" />
         <item
             android:id="@+id/nav_publications"
             android:icon="@mipmap/ic_lists"
-            android:title="Gerer mes publications" />
+            android:title="Gérer mes publications" />
         <item
             android:id="@+id/nav_compte"
-            android:icon="@mipmap/ic_username"
-            android:title="Gerer mon compte" />
+            android:icon="@mipmap/username"
+            android:title="Gérer mon compte" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@mipmap/ic_logout"
