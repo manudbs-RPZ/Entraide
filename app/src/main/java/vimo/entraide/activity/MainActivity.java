@@ -26,10 +26,13 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private TextView txtName;
+
     private Button buttonCorrige;
     private Button buttonEvent;
     private Button buttonObjet;
     private Button buttonForum;
+    private Button buttonAppartement;
+    private Button buttonCovoiturage;
 
     private SQLiteHandler db;
     private SessionManager session;
@@ -75,14 +78,29 @@ public class MainActivity extends AppCompatActivity
 
         final Animation animTranslateRight = AnimationUtils.loadAnimation(this,R.anim.anim_translate_rigth);
         final Animation animTranslateLeft = AnimationUtils.loadAnimation(this,R.anim.anim_translate_left);
-        final Animation animTranslateUp = AnimationUtils.loadAnimation(this,R.anim.anim_translate_up);
-        final Animation animTranslateDown = AnimationUtils.loadAnimation(this,R.anim.anim_translate_down);
+
+
+        buttonCovoiturage = (Button) findViewById(R.id.mainBCovoiturage);
+        buttonCovoiturage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.startAnimation(animTranslateRight);
+            }
+        });
+
+        buttonAppartement = (Button) findViewById(R.id.mainBAppartement);
+        buttonAppartement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.startAnimation(animTranslateLeft);
+            }
+        });
 
         buttonObjet = (Button) findViewById(R.id.mainBObjets);
         buttonObjet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.startAnimation(animTranslateDown);
+                v.startAnimation(animTranslateLeft);
             }
         });
 
@@ -90,12 +108,12 @@ public class MainActivity extends AppCompatActivity
         buttonForum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.startAnimation(animTranslateUp);
+                v.startAnimation(animTranslateRight);
             }
         });
 
-        buttonCorrige = (Button) findViewById(R.id.mainBEvent);
-        buttonCorrige.setOnClickListener(new View.OnClickListener() {
+        buttonEvent = (Button) findViewById(R.id.mainBEvent);
+        buttonEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 v.startAnimation(animTranslateLeft);
